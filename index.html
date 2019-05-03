@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mathbot</title>
+        <meta charset="utf-8"/>
+        <script src="{{ url_for('static', filename='jquery-3.4.0.min.js') }}"></script>
+    </head>
+    <body>
+        <textarea id="mypar" rows=20 cols=20 disabled style="width: 238px;
+                                                             height:371px;
+                                                             color: black;"></textarea>
+        <br>
+        <input type="text" id="inp1">
+        <input type="button" id="mybtn" value="send" onclick="getserverdata();">
+    </body>
+    <script>
+        var inp = document.getElementById("inp1");
+        inp.addEventListener('keyup', function(e){
+            if(e.keyCode==13){
+                getserverdata();
+            }
+        })
+        function getserverdata(){
+             var qryParam = "inp1=" + document.getElementById("inp1").value;
+             $.getJSON("{{ url_for('process_data') }}?" + qryParam, displayData)
+
+        }
+        function displayData(data) {
+            $.each(data, function (key, value) {
+                if (key == "message"){
+                    var ques = "You: " + document.getElementById("inp1").value;
+                    var ans = "Bot: " + value;
+                    var qna = ques + "&#13;&#10;" + ans + "&#13;&#10;" + "&#13;&#10;";
+                    document.getElementById("mypar").innerHTML += qna;
+                }
+            });
+        }
+    </script>
+</html>
