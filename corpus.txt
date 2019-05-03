@@ -1,0 +1,32 @@
+square area: side square.
+rectangle perimeter: 2 times sum of breadth and length.
+rectangle area: length times breadth.
+square perimeter: 4 times side.
+cube volume: side cube.
+cube lateral area: 4 times side square.
+cube total area: 6 times side square.
+cuboid total area: 2 times sum of lenth, breadth and height.
+cuboid lateral area: 2 times height multipled by the sum of lenth and breadth.
+cuboid volume: product of length, breadth and height.
+
+cone lateral area: pi times radius times slant height.
+cylinder lateral area: 2 times pi times radius times height.
+cone total area: the sum of pi times radius times slant height and pi radius squared.
+cylinder total area: sum of 2 times pi times radius times height and pi radius squared.
+
+cone volume: one third of pi times radius squared times height.
+cylinder volume: pi times radius squared times height.
+
+circle area: pi times radius squared.
+circle perimeter: 2 times pi times radius.
+
+triangle area: half times base times height.
+triangle perimeter: sum of three sides.
+
+sphere volume: 4/3 times pi times radius cubed.
+sphere area: 4 times pi radius squared.
+
+hemisphere volume: 2/3 times pi times radius cubed.
+hemisphere lateral area: 2 times pi times radius squared.
+hemisphere total area: 3 times pi times radius squared.
+
